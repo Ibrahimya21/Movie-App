@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Browser</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <div class="background-layer" id="backgroundLayer"></div>
+      <div class="overlay"></div>
+
+      <section class="hero">
+        <header class="topbar">
+          <div class="badge">
+            <span class="badge-new">NEW</span>
+            <span class="badge-movie">MOVIE</span>
+          </div>
+
+          <form class="search-form" id="searchForm">
+            <input
+              id="searchInput"
+              type="text"
+              placeholder="Search..."
+              aria-label="Search movies"
+            />
+          </form>
+        </header>
+
+        <div class="hero-content">
+          <div class="details">
+            <h1 id="movieTitle">Loading...</h1>
+
+            <div class="meta">
+              <span class="meta-rating" id="movieRating">IMDb N/A</span>
+              <span id="movieYear">----</span>
+              <span id="movieDuration">-- min</span>
+              <span id="movieGenre">Unknown</span>
+            </div>
+
+            <p id="movieDescription" class="description">
+              Please wait while movies are loading.
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-controls">
+          <button id="prevBtn" class="nav-btn" aria-label="Scroll left">
+            &#10094;
+          </button>
+          <button id="nextBtn" class="nav-btn" aria-label="Scroll right">
+            &#10095;
+          </button>
+        </div>
+
+        <section class="movie-strip-section">
+          <div
+            id="statusMessage"
+            class="status-message"
+            aria-live="polite"
+          ></div>
+
+          <div
+            class="movie-strip"
+            id="movieStrip"
+            aria-label="Movie list"
+          ></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
